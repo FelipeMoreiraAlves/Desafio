@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Lista de contas cadastradas</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<h:outputScript library="js" name="jquery-3.3.1.min.js" />
+	<h:outputScript library="js" name="bootstrap.min.js" />
+</h:head>
+<h:body>
+	<div class="container">
+		<h1>Lista de Contas</h1>
+		<h:dataTable value="#{contaBean.contas}" var="c"
+			styleClass="table">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+			#{c.id}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+			#{c.nome}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Saldo</f:facet>
+			#{c.saldo}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Data de abertura da conta</f:facet>
+			#{c.dataAbertura}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Ações</f:facet>
+				<h:form>
+					<h:commandButton styleClass="btn btn-primary btn-sm" action="conta" value="Atualizar">
+						<f:setPropertyActionListener value="#{c}"
+							target="#{contaBean.conta}" />
+					</h:commandButton>
+					<h:commandButton styleClass="btn btn-danger btn-sm" action="#{contaBean.deletar(c.id)}"
+						value="Remover" />
+				</h:form>
+			</h:column>
+		</h:dataTable>
+	</div>
+</h:body>
+
+</html>
