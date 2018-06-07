@@ -26,6 +26,7 @@ import br.com.entity.Conta;
 import br.com.exception.CommitException;
 import br.com.singleton.EntityManagerFactorySingleton;
 
+@Path("/conta")
 public class ContaResource {
 
 	private ContaDAO dao;
