@@ -10,7 +10,7 @@ public interface GenericDAO <T,K> {
 	void cadastrar(T entidade);
 	void atualizar(T entidade);
 	void remover(K chave) throws IdNotFoundException;;
-	
+	T buscar(K chave);
 	
 	List<T> listar();
 	
