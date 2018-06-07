@@ -14,27 +14,29 @@
 </h:head>
 
 <h:body>
-	<h1>Conta</h1>
+<div class="container">
 	<h:form>
-		<div>
+		<h1>Contas</h1>
+	
+		<div class="form-group">
 			<h:outputLabel value="ID" for="idConta"/>
-			<h:inputText id="idConta" value="#{contaBean.conta.id}"/>
+			<h:inputText id="idConta" styleClass="form-control" value="#{contaBean.conta.id}"/>
 		</div>
-		<div>
+		<div class="form-group">
 			<h:outputLabel value="Nome" for="nome"/>
-			<h:inputText id="nome" value="#{contaBean.conta.nome}"/>
+			<h:inputText id="nome" styleClass="form-control" value="#{contaBean.conta.nome}"/>
 		</div>
-		<div>
+		<div class="form-group">
 			<h:outputLabel value="Saldo" for="saldo"/>
-			<h:inputText id="saldo" value="#{contaBean.conta.saldo}"/>
+			<h:inputText styleClass="form-control" id="saldo" value="#{contaBean.conta.saldo}"/>
 		</div>
-		<div>
+		<div class="form-group">
 			<h:outputLabel value="Data de abertuda da conta" for="dataConta"/>
-			<h:inputText id="nome" value="#{contaBean.conta.dataAbertura}"/>
+			<h:inputText styleClass="form-control" id="nome" value="#{contaBean.conta.dataAbertura}"/>
 		</div>
-		<h:commandButton action="#{contaBean.salvar}" value="Salvar"/>
+		<h:commandButton action="#{contaBean.salvar}" styleClass="btn btn-success" value="Salvar"/>
 	</h:form>
-
+</div>
 
 </h:body>
 </html>

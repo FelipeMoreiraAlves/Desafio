@@ -1,5 +1,7 @@
 package br.com.dao.impl;
 
+import javax.persistence.EntityManager;
+
 import br.com.dao.ContaDAO;
 import br.com.entity.Conta;
 

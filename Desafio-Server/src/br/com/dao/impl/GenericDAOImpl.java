@@ -6,8 +6,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 
 import br.com.dao.GenericDAO;
-import br.com.fiap.ws.exception.CommitException;
-import br.com.fiap.ws.exception.IdNotFoundException;
+import br.com.exception.CommitException;
+import br.com.exception.IdNotFoundException;
 
 public abstract class GenericDAOImpl<T,K> implements GenericDAO<T, K>{
 

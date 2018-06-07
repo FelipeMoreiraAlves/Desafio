@@ -20,11 +20,11 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.core.Response.Status;
 
 import br.com.dao.ContaDAO;
+import br.com.dao.impl.ContaDAOImpl;
+import br.com.exception.IdNotFoundException;
 import br.com.entity.Conta;
-import br.com.fiap.jpa.exception.KeyNotFoundException;
-import br.com.fiap.ws.entity.Imovel;
-import br.com.fiap.ws.exception.CommitException;
-import br.com.fiap.ws.singleton.EntityManagerFactorySingleton;
+import br.com.exception.CommitException;
+import br.com.singleton.EntityManagerFactorySingleton;
 
 public class ContaResource {
 
@@ -78,7 +78,7 @@ public class ContaResource {
 	
 	@DELETE
 	@Path("{id}")
-	public void remover(@PathParam ("id") int codigo) throws KeyNotFoundException {
+	public void remover(@PathParam ("id") int codigo) throws IdNotFoundException {
 		try {
 			dao.remover(codigo);
 			dao.commit();

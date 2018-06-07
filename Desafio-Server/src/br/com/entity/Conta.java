@@ -2,6 +2,10 @@ package br.com.entity;
 
 import java.util.Calendar;
 
+import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Column;
+
 @Entity
 public class Conta {
 

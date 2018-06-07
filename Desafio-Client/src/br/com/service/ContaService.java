@@ -5,6 +5,10 @@ import java.util.List;
 
 import javax.ws.rs.core.MediaType;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.WebResource;
+
 import br.com.to.Conta;
 
 

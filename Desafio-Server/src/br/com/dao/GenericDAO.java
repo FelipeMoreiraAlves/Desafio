@@ -2,8 +2,8 @@ package br.com.dao;
 
 import java.util.List;
 
-import br.com.fiap.ws.exception.CommitException;
-import br.com.fiap.ws.exception.IdNotFoundException;
+import br.com.exception.CommitException;
+import br.com.exception.IdNotFoundException;
 
 public interface GenericDAO <T,K> {
 
