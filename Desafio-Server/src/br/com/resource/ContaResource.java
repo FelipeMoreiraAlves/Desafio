@@ -50,7 +50,7 @@ public class ContaResource {
 		}
 	
 		UriBuilder url = uri.getAbsolutePathBuilder();
-		url.path(String.valueOf(conta.getCodigo()));
+		url.path(String.valueOf(conta.getId()));
 		return Response.created(url.build()).build();
 	}
 	

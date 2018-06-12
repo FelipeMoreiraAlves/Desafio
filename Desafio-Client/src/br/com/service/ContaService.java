@@ -14,7 +14,7 @@ import br.com.to.Conta;
 
 
 public class ContaService {
-	private static final String URL = "http://localhost:8080/Desafio-Service/rest/imovel";
+	private static final String URL = "http://localhost:8080/Desafio-Server/rest/conta";
 	
 	private Client client = Client.create();
 

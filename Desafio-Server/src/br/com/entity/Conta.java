@@ -16,7 +16,7 @@ public class Conta {
 	
 	private double saldo;
 	
-	@column(name="data_abertura_conta")
+	@Column(name="data_abertura_conta")
 	private Calendar dataAbertura;
 
 	public int getId() {
